@@ -10,7 +10,7 @@ datanasc DATE NOT NULL,
 peso DECIMAL(5,2),
 altura FLOAT,
 whatsapp VARCHAR(15) NOT NULL,
-email VARCHAR(100) UNIQUE,
+email VARCHAR(100) UNIQUE NOT NULL,
 rua VARCHAR(100) NOT NULL,
 numero INT(6) NOT NULL,
 complemento VARCHAR(100), 
@@ -27,6 +27,18 @@ diadasemana DATE NOT NULL,
 horario TIME NOT NULL,
 tipo VARCHAR(50) NOT NULL
 );
+
+-- Inserindo dois dados ao mesmo tempo na tabela de treino
+
+INSERT INTO treino(dia da semana, horario, tipo)
+VALUES("2025-03-12" "13:30:00", "flexões"),
+("2025-03-13", "18;00;00", "Musculação");
+
+-- Deletando um dado/registro especifico da tabela
+DELETE FROM treino WHERE tipo = "Musculação";
+
+-- DELETANDO TODOS OS RESGISTROS DA TABELA
+DELETE FROM treino;
 
 --DELETAR UMA TABELA
 
